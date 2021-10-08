@@ -1,0 +1,24 @@
+{% extends "login/layout.html" %}
+
+{% block body %}
+
+    <h2>Has entrado</h2>
+
+<div>
+Bienvenido, {{user.username}}
+</div> 
+<hr/>
+<div>
+    <p>
+    descripción: 
+    </p>
+    <p>
+        {{user.description}}
+    </p>
+</div>
+<a href="{%url 'logout'%}">
+    <button class="btn btn-primary">
+        logout
+    </button>
+</a>
+{% endblock %}
